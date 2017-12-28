@@ -1,0 +1,207 @@
+#pragma once
+
+/*
+Special Types and Delegates
+*/
+
+delegate long HookProc(long iCode, IntPtr wParam, IntPtr lParam);
+
+/*
+Win32 API Function Imports
+*/
+
+[DllImport("User32.dll", EntryPoint = "SetWindowsHookEx")]
+extern "C" long SetWindowsHookEx(long HookID, HookProc lpfn, IntPtr hInstance, long ThreadID);
+
+[DllImport("User32.dll", EntryPoint = "CallNextHookEx")]
+extern "C" long CallNextHookEx(long HookID, long iCode, IntPtr wParam, IntPtr lParam);
+
+[DllImport("User32.dll", EntryPoint = "UnhookWindowsHookEx")]
+extern "C" bool UnhookWindowsHookEx(long HookID);
+
+/*
+Hook Constants
+*/
+
+const long WH_MIN = -1;
+const long WH_MSGFILTER = -1;
+const long WH_JOURNALRECORD = 0;
+const long WH_JOURNALPLAYBACK = 1;
+const long WH_KEYBOARD = 2;
+const long WH_GETMESSAGE = 3;
+const long WH_CALLWNDPROC = 4;
+const long WH_CBT = 5;
+const long WH_SYSMSGFILTER = 6;
+const long WH_MOUSE = 7;
+const long WH_HARDWARE = 8;
+const long WH_DEBUG = 9;
+const long WH_SHELL = 10;
+const long WH_FOREGROUNDIDLE = 11;
+const long WH_CALLWNDPROCRET = 12;
+const long WH_KEYBOARD_LL = 13;
+const long WH_MOUSE_LL = 14;
+const long WH_MAX = 14;
+const long WH_MINHOOK = WH_MIN;
+const long WH_MAXHOOK = WH_MAX;
+
+/*
+Hook Codes
+*/
+
+const long HC_ACTION = 0;
+const long HC_GETNEXT = 1;
+const long HC_SKIP = 2;
+const long HC_NOREMOVE = 3;
+const long HC_NOREM = HC_NOREMOVE;
+const long HC_SYSMODALON = 4;
+const long HC_SYSMODALOFF = 5;
+
+/*
+CBT Hook Codes
+*/
+
+const long HCBT_MOVESIZE = 0;
+const long HCBT_MINMAX = 1;
+const long HCBT_QS = 2;
+const long HCBT_CREATEWND = 3;
+const long HCBT_DESTROYWND = 4;
+const long HCBT_ACTIVATE = 5;
+const long HCBT_CLICKSKIPPED = 6;
+const long HCBT_KEYSKIPPED = 7;
+const long HCBT_SYSCOMMAND = 8;
+const long HCBT_SETFOCUS = 9;
+
+/*
+Virtual Key Codes
+*/
+
+const long VK_LBUTTON = 0x01;
+const long VK_RBUTTON = 0x02;
+const long VK_CANCEL = 0x03;
+const long VK_MBUTTON = 0x04;
+const long VK_XBUTTON1 = 0x05;
+const long VK_XBUTTON2 = 0x06;
+const long VK_BACK = 0x08;
+const long VK_TAB = 0x09;
+const long VK_CLEAR = 0x0C;
+const long VK_RETURN = 0x0D;
+const long VK_SHIFT = 0x10;
+const long VK_CONTROL = 0x11;
+const long VK_MENU = 0x12;
+const long VK_PAUSE = 0x13;
+const long VK_CAPITAL = 0x14;
+const long VK_ESCAPE = 0x1B;
+const long VK_CONVERT = 0x1C;
+const long VK_NONCONVERT = 0x1D;
+const long VK_ACCEPT = 0x1E;
+const long VK_MODECHANGE = 0x1F;
+const long VK_SPACE = 0x20;
+const long VK_PRIOR = 0x21;
+const long VK_NEXT = 0x22;
+const long VK_END = 0x23;
+const long VK_HOME = 0x24;
+const long VK_LEFT = 0x25;
+const long VK_UP = 0x26;
+const long VK_RIGHT = 0x27;
+const long VK_DOWN = 0x28;
+const long VK_SELECT = 0x29;
+const long VK_PRINT = 0x2A;
+const long VK_EXECUTE = 0x2B;
+const long VK_SNAPSHOT = 0x2C;
+const long VK_INSERT = 0x2D;
+const long VK_DELETE = 0x2E;
+const long VK_HELP = 0x2F;
+const long VK_0 = 0x30;
+const long VK_1 = 0x31;
+const long VK_2 = 0x32;
+const long VK_3 = 0x33;
+const long VK_4 = 0x34;
+const long VK_5 = 0x35;
+const long VK_6 = 0x36;
+const long VK_7 = 0x37;
+const long VK_8 = 0x38;
+const long VK_9 = 0x39;
+const long VK_A = 0x41;
+const long VK_B = 0x42;
+const long VK_C = 0x43;
+const long VK_D = 0x44;
+const long VK_E = 0x45;
+const long VK_F = 0x46;
+const long VK_G = 0x47;
+const long VK_H = 0x48;
+const long VK_I = 0x49;
+const long VK_J = 0x4A;
+const long VK_K = 0x4B;
+const long VK_L = 0x4C;
+const long VK_M = 0x4D;
+const long VK_N = 0x4E;
+const long VK_O = 0x4F;
+const long VK_P = 0x50;
+const long VK_Q = 0x51;
+const long VK_R = 0x52;
+const long VK_S = 0x53;
+const long VK_T = 0x54;
+const long VK_U = 0x55;
+const long VK_V = 0x56;
+const long VK_W = 0x57;
+const long VK_X = 0x58;
+const long VK_Y = 0x59;
+const long VK_Z = 0x5A;
+const long VK_LWIN = 0x5B;
+const long VK_RWIN = 0x5C;
+const long VK_APPS = 0x5D;
+const long VK_SLEEP = 0x5F;
+const long VK_NUMPAD0 = 0x60;
+const long VK_NUMPAD1 = 0x61;
+const long VK_NUMPAD2 = 0x62;
+const long VK_NUMPAD3 = 0x63;
+const long VK_NUMPAD4 = 0x64;
+const long VK_NUMPAD5 = 0x65;
+const long VK_NUMPAD6 = 0x66;
+const long VK_NUMPAD7 = 0x67;
+const long VK_NUMPAD8 = 0x68;
+const long VK_NUMPAD9 = 0x69;
+const long VK_MULTIPLY = 0x6A;
+const long VK_ADD = 0x6B;
+const long VK_SEPARATOR = 0x6C;
+const long VK_SUBTRACT = 0x6D;
+const long VK_DECIMAL = 0x6E;
+const long VK_DIVIDE = 0x6F;
+const long VK_F1 = 0x70;
+const long VK_F2 = 0x71;
+const long VK_F3 = 0x72;
+const long VK_F4 = 0x73;
+const long VK_F5 = 0x74;
+const long VK_F6 = 0x75;
+const long VK_F7 = 0x76;
+const long VK_F8 = 0x77;
+const long VK_F9 = 0x78;
+const long VK_F10 = 0x79;
+const long VK_F11 = 0x7A;
+const long VK_F12 = 0x7B;
+const long VK_NUMLOCK = 0x90;
+const long VK_SCROLL = 0x91;
+const long VK_LSHIFT = 0xA0
+const long VK_RSHIFT = 0xA1
+const long VK_LCONTROL = 0xA2
+const long VK_RCONTROL = 0xA3
+const long VK_LMENU = 0xA4
+const long VK_RMENU = 0xA5
+const long VK_BROWSER_BACK = 0xA6
+const long VK_BROWSER_FORWARD = 0xA7
+const long VK_BROWSER_REFRESH = 0xA8
+const long VK_BROWSER_STOP = 0xA9
+const long VK_BROWSER_SEARCH = 0xAA
+const long VK_BROWSER_FAVORITES = 0xAB
+const long VK_BROWSER_HOME = 0xAC
+const long VK_VOLUME_MUTE = 0xAD
+const long VK_VOLUME_DOWN = 0xAE
+const long VK_VOLUME_UP = 0xAF
+const long VK_MEDIA_NEXT_TRACK = 0xB0
+const long VK_MEDIA_PREV_TRACK = 0xB1
+const long VK_MEDIA_STOP = 0xB2
+const long VK_MEDIA_PLAY_PAUSE = 0xB3
+const long VK_LAUNCH_MAIL = 0xB4
+const long VK_LAUNCH_MEDIA_SELECT = 0xB5
+const long VK_LAUNCH_APP1 = 0xB6
+const long VK_LAUNCH_APP2 = 0xB7

@@ -1,0 +1,23 @@
+﻿  Node.cpp
+  HookerMan.cpp
+c:\active\qhooker\hookerman\HookerMan.h(6): error C3386: 'HookerMan': __declspec(dllexport)/__declspec(dllimport) cannot be applied to a managed type
+c:\active\qhooker\hookerman\HookerMan.h(8): error C3395: 'HookerMan::UpdateKey': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(9): error C3395: 'HookerMan::executeFuncs': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(10): error C3395: 'HookerMan::executeFuncs': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(11): warning C4441: calling convention of '__stdcall ' ignored; '__clrcall ' used instead
+c:\active\qhooker\hookerman\HookerMan.h(11): error C3395: 'HookerMan::MyLowLevel': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(13): error C3395: 'HookerMan::HookerMan': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(15): error C3395: 'HookerMan::hook': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(16): error C3395: 'HookerMan::addEvent': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(17): error C3395: 'HookerMan::addEvent': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(18): error C3395: 'HookerMan::unhook': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+c:\active\qhooker\hookerman\HookerMan.h(19): error C3395: 'HookerMan::HookerMan': __declspec(dllexport) cannot be applied to a function with the __clrcall calling convention
+HookerMan.cpp(13): warning C4244: '=': conversion from 'SHORT' to 'BYTE', possible loss of data
+HookerMan.cpp(49): warning C4441: calling convention of '__stdcall ' ignored; '__clrcall ' used instead
+HookerMan.cpp(91): error C2664: 'HHOOK SetWindowsHookExW(int,HOOKPROC,HINSTANCE,DWORD)': cannot convert argument 2 from 'LRESULT (__clrcall *)(int,WPARAM,LPARAM)' to 'HOOKPROC'
+  HookerMan.cpp(91): note: None of the functions with this name in scope match the target type
+HookerMan.cpp(105): error C3842: 'unhook': 'const' and 'volatile' qualifiers on member functions of managed types are not supported
+HookerMan.cpp(105): error C2511: 'void HookerMan::unhook(void) const': overloaded member function not found in 'HookerMan'
+  c:\active\qhooker\hookerman\HookerMan.h(6): note: see declaration of 'HookerMan'
+  KeyboardData.cpp
+  Generating Code...

@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\Tmp\) contains files shared from another project (KeyboardSplitter.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  KeyboardData.cpp
+  QHooker.vcxproj -> C:\Users\Zanzes\source\repos\QHooker\Build\QHooker.dll

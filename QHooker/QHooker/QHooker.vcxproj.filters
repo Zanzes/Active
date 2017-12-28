@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="KeyboardData.cpp" />
+    <ClCompile Include="KeyboardSplitter.cpp" />
+    <ClCompile Include="QHooker.cpp" />
+    <ClCompile Include="DataStructures\Node.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KeyboardData.h" />
+    <ClInclude Include="QHooker.h" />
+    <ClInclude Include="DataStructures\LZLinkedList.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\Node.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{d10f6a4f-f18d-43da-84a5-b6f1e39e65df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataStructures\LZLinkedList.inl">
+      <Filter>DataStructures</Filter>
+    </None>
+  </ItemGroup>
+</Project>

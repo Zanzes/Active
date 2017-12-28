@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="HookManager">
+      <UniqueIdentifier>{2d6d0b82-aabc-478f-992a-a5505567eae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{572548e9-da5b-400b-bdcd-8b520bfc5c69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataStructures\Node.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructures\LZLinkedList.h">
+      <Filter>DataStructures</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardData.h" />
+    <ClInclude Include="HookerMan.h">
+      <Filter>HookManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataStructures\Node.cpp">
+      <Filter>DataStructures</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardData.cpp" />
+    <ClCompile Include="HookerMan.cpp">
+      <Filter>HookManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataStructures\LZLinkedList.inl">
+      <Filter>DataStructures</Filter>
+    </None>
+    <None Include="bla.tmp" />
+  </ItemGroup>
+</Project>

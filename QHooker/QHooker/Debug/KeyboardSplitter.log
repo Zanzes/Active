@@ -1,0 +1,3 @@
+﻿  KeyboardSplitter.cpp
+c:\users\zanzes\source\repos\keyboardsplitter\keyboardsplitter\keyboardsplitter.cpp(14): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  KeyboardSplitter.vcxproj -> C:\Users\Zanzes\source\repos\KeyboardSplitter\Debug\KeyboardSplitter.exe

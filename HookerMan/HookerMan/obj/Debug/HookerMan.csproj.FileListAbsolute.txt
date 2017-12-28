@@ -1,0 +1,8 @@
+C:\Active\HookerMan\HookerMan\bin\Debug\HookerMan.exe
+C:\Active\HookerMan\HookerMan\bin\Debug\HookerMan.pdb
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.csprojResolveAssemblyReference.cache
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.Window.resources
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.csproj.GenerateResource.Cache
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.csproj.CoreCompileInputs.cache
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.exe
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.pdb

@@ -1,0 +1,30 @@
+﻿  QHooker.cpp
+  KeyboardSplitter.cpp
+  KeyboardData.cpp
+  Node.cpp
+  Generating Code...
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/RELEASE' specification
+     Creating library C:\Users\Zanzes\source\repos\KeyboardSplitter\Build\KeyboardSplitter.lib and object C:\Users\Zanzes\source\repos\KeyboardSplitter\Build\KeyboardSplitter.exp
+kernel32.lib(KERNEL32.dll) : warning LNK4237: /SUBSYSTEM:NATIVE specified when importing from 'KERNEL32.DLL';  Use /SUBSYSTEM:CONSOLE or /SUBSYSTEM:WINDOWS.
+user32.lib(USER32.dll) : warning LNK4237: /SUBSYSTEM:NATIVE specified when importing from 'USER32.DLL';  Use /SUBSYSTEM:CONSOLE or /SUBSYSTEM:WINDOWS.
+QHooker.obj : error LNK2019: unresolved external symbol ___CxxFrameHandler3 referenced in function __unwindfunclet$?Add@?$LZLinkedList@P6AXVKeyboardData@@@Z@DataStructures@LZSoft@@QAEXQ6AXVKeyboardData@@@Z@Z$0
+QHooker.obj : error LNK2019: unresolved external symbol _memset referenced in function "private: static long __stdcall QHooker::MyLowLevel(int,unsigned int,long)" (?MyLowLevel@QHooker@@CGJHIJ@Z)
+MSVCRTD.lib(_init_.obj) : error LNK2019: unresolved external symbol __CrtDbgReport referenced in function __CRT_RTC_INIT
+MSVCRTD.lib(_init_.obj) : error LNK2019: unresolved external symbol __CrtDbgReportW referenced in function __CRT_RTC_INITW
+MSVCRTD.lib(new_scalar.obj) : error LNK2019: unresolved external symbol __callnewh referenced in function "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+MSVCRTD.lib(new_scalar.obj) : error LNK2019: unresolved external symbol _malloc referenced in function "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+MSVCRTD.lib(_error_.obj) : error LNK2019: unresolved external symbol _strcpy_s referenced in function "void __cdecl _RTC_StackFailure(void *,char const *)" (?_RTC_StackFailure@@YAXPAXPBD@Z)
+MSVCRTD.lib(_error_.obj) : error LNK2019: unresolved external symbol _strcat_s referenced in function "void __cdecl _RTC_StackFailure(void *,char const *)" (?_RTC_StackFailure@@YAXPAXPBD@Z)
+MSVCRTD.lib(_error_.obj) : error LNK2019: unresolved external symbol ___stdio_common_vsprintf_s referenced in function __vsprintf_s_l
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: unresolved external symbol ___std_exception_copy referenced in function "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z)
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: unresolved external symbol ___std_exception_destroy referenced in function "public: virtual __thiscall std::exception::~exception(void)" (??1exception@std@@UAE@XZ)
+MSVCRTD.lib(throw_bad_alloc.obj) : error LNK2019: unresolved external symbol __CxxThrowException@8 referenced in function "void __cdecl __scrt_throw_std_bad_alloc(void)" (?__scrt_throw_std_bad_alloc@@YAXXZ)
+MSVCRTD.lib(delete_scalar.obj) : error LNK2019: unresolved external symbol __free_dbg referenced in function "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol __wmakepath_s referenced in function "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned int)" (?GetPdbDllPathFromFilePath@@YAHPB_WPA_WI@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol __wsplitpath_s referenced in function "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned int)" (?GetPdbDllPathFromFilePath@@YAHPB_WPA_WI@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol _wcscpy_s referenced in function "int __cdecl GetPdbDllPathFromFilePath(wchar_t const *,wchar_t *,unsigned int)" (?GetPdbDllPathFromFilePath@@YAHPB_WPA_WI@Z)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_GetModuleFileNameW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_GetModuleHandleW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
+MSVCRTD.lib(_pdblkup_.obj) : error LNK2019: unresolved external symbol ___vcrt_LoadLibraryExW referenced in function "struct HINSTANCE__ * __cdecl GetPdbDll(void)" (?GetPdbDll@@YAPAUHINSTANCE__@@XZ)
+MSVCRTD.lib(_chandler4gs_.obj) : error LNK2019: unresolved external symbol __except_handler4_common referenced in function __except_handler4
+C:\Users\Zanzes\source\repos\KeyboardSplitter\Build\KeyboardSplitter.dll : fatal error LNK1120: 20 unresolved externals

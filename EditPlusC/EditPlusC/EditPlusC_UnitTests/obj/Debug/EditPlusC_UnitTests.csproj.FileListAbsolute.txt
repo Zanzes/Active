@@ -1,0 +1,1 @@
+C:\Dev (No Sync)\Visual Studio\EditPlusC\EditPlusC\EditPlusC_UnitTests\obj\Debug\EditPlusC_UnitTests.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+C:\Users\Zanzes\source\repos\QHooker\LowHook\bin\Debug\LowHook.exe.config
+C:\Users\Zanzes\source\repos\QHooker\LowHook\bin\Debug\LowHook.exe
+C:\Users\Zanzes\source\repos\QHooker\LowHook\bin\Debug\LowHook.pdb
+C:\Users\Zanzes\source\repos\QHooker\LowHook\obj\Debug\LowHook.csproj.CoreCompileInputs.cache
+C:\Users\Zanzes\source\repos\QHooker\LowHook\obj\Debug\LowHook.exe
+C:\Users\Zanzes\source\repos\QHooker\LowHook\obj\Debug\LowHook.pdb
