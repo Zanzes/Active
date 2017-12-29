@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+
 // ReSharper disable UnusedMember.Local
 // ReSharper disable InconsistentNaming
 
-namespace HookerMan
+namespace LZSoft.HookerMan.WinApi
 {
     static class Imported
     {
         public delegate int HookProc(int nCode, IntPtr wParam, IntPtr lParam);
-        
-        //This is the Import for the SetWindowsHookEx function. Use this function to install a thread-specific hook.
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true, CallingConvention = CallingConvention.Winapi)]
+        public static extern short GetKeyState(int keyCode);
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern int SetWindowsHookEx(int idHook, HookProc lpfn,IntPtr hInstance, int threadId);
-
-        //This is the Import for the UnhookWindowsHookEx function. Call this function to uninstall the hook.
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern bool UnhookWindowsHookEx(int idHook);
-
-        //This is the Import for the CallNextHookEx function. Use this function to pass the hook information to the next hook procedure in chain.
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern int CallNextHookEx(int idHook, int nCode, IntPtr wParam, IntPtr lParam);
 
@@ -25,6 +23,8 @@ namespace HookerMan
         Hook Constants
         */
 
+        public const int WM_KEYUP = 0x0101;
+        public const int WM_SYSKEYUP = 0x0105;
         public const int WH_MIN = -1;
         public const int WH_MSGFILTER = -1;
         public const int WH_JOURNALRECORD = 0;

@@ -1,12 +1,12 @@
-﻿namespace HookerMan
-{
-    class Program
-    {
-        Hooker h = new Hooker();
+﻿//namespace LZSoft.HookerMan
+//{
+//    public class Program
+//    {
+//        Hooker _h = new Hooker();
 
-        static void Main(string[] args)
-        {
-            new Window().ShowDialog();
-        }
-    }
-}
+//        public static void Main(string[] args)
+//        {
+//            new Window().Show();
+//        }
+//    }
+//}
