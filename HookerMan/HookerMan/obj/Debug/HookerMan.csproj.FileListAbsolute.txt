@@ -1,8 +1,7 @@
-C:\Active\HookerMan\HookerMan\bin\Debug\HookerMan.pdb
-C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.csprojResolveAssemblyReference.cache
-C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.csproj.CoreCompileInputs.cache
-C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.pdb
 C:\Active\HookerMan\HookerMan\bin\Debug\HookerMan.dll
-C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.dll
+C:\Active\HookerMan\HookerMan\bin\Debug\HookerMan.pdb
 C:\Active\HookerMan\HookerMan\bin\Debug\JetBrains.Annotations.dll
 C:\Active\HookerMan\HookerMan\bin\Debug\JetBrains.Annotations.xml
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.csproj.CoreCompileInputs.cache
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.dll
+C:\Active\HookerMan\HookerMan\obj\Debug\HookerMan.pdb

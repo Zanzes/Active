@@ -19,19 +19,28 @@ namespace LZSoft.TestConsumer.ViewModel
             }
         }
 
+        public bool IsKeyboardHooked => hooker.Enabled;
+        public bool CaptureKey { get; set; }
         public ICommand OnLoadCommand { get; set; }
-        public ICommand TestCommand { get; set; }
+        public ICommand EnableKeyboardHookCommand { get; set; }
+        public ICommand DisableKeyboardHookCommand { get; set; }
 
         public MainViewModel()
         {
+            hooker.AddEvent(WriteKey);
             OnLoadCommand = new DelegateCommand(OnLoad);
-            TestCommand = new DelegateCommand(Run);
+            EnableKeyboardHookCommand = new DelegateCommand(EnableKeyboardHook);
+            DisableKeyboardHookCommand = new DelegateCommand(DisableKeyboardHook);
         }
 
-        public void Run()
+        public void EnableKeyboardHook()
         {
-            hooker.AddEvent(WriteKey);
-            //Program.Main(Environment.GetCommandLineArgs());
+            hooker.Enable();
+        }
+
+        public void DisableKeyboardHook()
+        {
+            hooker.Disable();
         }
 
 

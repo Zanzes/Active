@@ -1,12 +1,16 @@
-﻿<Window x:Class="LZSoft.TestConsumer.View.MainView"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:LZSoft.TestConsumer.ViewModel"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:Converters="clr-namespace:LZSoft.TestConsumer.Converters" x:Class="LZSoft.TestConsumer.View.MainView"
         mc:Ignorable="d"
         Title="MainView" Height="350" Width="525">
+    <Window.Resources>
+        <Converters:BoolNotConverter x:Key="BoolNotConverter"/>
+    </Window.Resources>
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
@@ -17,10 +21,22 @@
     </i:Interaction.Triggers>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Hidden" IsReadOnly="True" Text="{Binding OutputData}"/>
-        <Button Grid.Row="1" Content="Test" Command="{Binding TestCommand}"/>
+        <WrapPanel Grid.Row="0">
+            <GroupBox Header="KeyboardHook">
+                <StackPanel>
+                    <CheckBox Margin="4" Content="Capture key" IsChecked="{Binding CaptureKey}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Margin="4" Command="{Binding EnableKeyboardHookCommand}" Content="Enable" IsEnabled="{Binding IsKeyboardHooked, Converter={StaticResource BoolNotConverter}, Mode=OneWay}"/>
+                        <Button Margin="4" Command="{Binding DisableKeyboardHookCommand}" Content="Disable" IsEnabled="{Binding IsKeyboardHooked}"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </WrapPanel>
+        <TextBlock x:Name="tb" Grid.Row="1" Text="{Binding OutputData}"/>
+        <!--<Button Grid.Row="2" Content="Test" Command="{Binding TestCommand}"/>-->
     </Grid>
 </Window>
